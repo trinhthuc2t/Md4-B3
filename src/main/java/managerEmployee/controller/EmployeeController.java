@@ -65,7 +65,12 @@ public class EmployeeController {
     @GetMapping("/sortDESC")
     public String sortDESC(Model model){
         model.addAttribute("employees", employeeService.sortDESC());
-        return "redirect:/employees";
+        return "home";
+    }
+    @GetMapping("/search")
+    public String search(String nameSearch, Model model){
+        model.addAttribute("employees", employeeService.findByName(nameSearch));
+        return "home";
     }
 
 }

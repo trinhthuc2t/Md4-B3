@@ -14,7 +14,21 @@
 
 <div class="container">
     <h2>Striped Rows</h2>
-    <p><a style="margin-right: 20px" class="btn btn-success" href="employees/add">Add New</a><a style="margin-right: 20px" class="btn btn-warning" href="employees/sortASC">sortASC</a><a class="btn btn-warning" href="employees/sortDESC">sortDESC</a></p>
+    <div class="row">
+        <div class="col-6">
+            <p>
+                <a style="margin-right: 20px" class="btn btn-success" href="employees/add">Add New</a>
+                <a style="margin-right: 20px" class="btn btn-warning" href="employees/sortASC">sortASC</a>
+                <a class="btn btn-warning" href="employees/sortDESC">sortDESC</a>
+            </p>
+        </div>
+        <div class="col-6">
+            <form action="employees/search" method="get">
+                <input type="text" name="nameSearch" placeholder="Tìm kiếm theo tên...">
+                <button type="submit" class="search-link btn btn-info">Tìm kiếm</button>
+            </form>
+        </div>
+    </div>
     <table class="table table-striped">
         <thead>
         <tr>
