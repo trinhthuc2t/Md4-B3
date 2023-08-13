@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<a href="/employees">Back to list</a>
+<table>
+  <tr>
+    <td>Mã nhân viên: </td>
+    <td th:text="${employee.employeeCode}"></td>
+  </tr>
+    <tr>
+    <td>Họ và tên:</td>
+    <td th:text="${employee.name}"></td>
+  </tr>
+    <tr>
+    <td>Tuổi:</td>
+    <td th:text="${employee.age}"></td>
+  </tr>
+    <tr>
+        <td>Lương:</td>
+        <td th:text="${employee.salary}"></td>
+    </tr>
+    <tr>
+        <td>Ban:</td>
+        <td th:text="${employee.department.name}"></td>
+    </tr>
+</table>
+</body>
+</html>
